@@ -164,8 +164,33 @@ movie.save
 batman_begins = Movie.find_by({"name" => "Batman Begins"})
 dark_knight = Movie.find_by({"name" => "The Dark Knight"})
 dark_knight_rises = Movie.find_by({"name" => "The Dark Knight Rises"})
+christian = Actor.find_by({"name" => "Christian Bale"})
+michael = Actor.find_by({"name" => "Michael Caine"})
+liam = Actor.find_by({"name" => "Liam Neeson"})
+katie = Actor.find_by({"name" => "Katie Holmes"})
+gary = Actor.find_by({"name" => "Gary Oldman"})
+heath = Actor.find_by({"name" => "Heath Ledger"})
+aaron = Actor.find_by({"name" => "Aaron Eckhart"})
+maggie = Actor.find_by({"name" => "Maggie Gyllenhaal"})
+tom = Actor.find_by({"name" => "Tom Hardy"})
+joseph = Actor.find_by({"name" => "Joseph Gordon-Levitt"})
+anne = Actor.find_by({"name" => "Anne Hathaway"})
 
-# *****left off here - need to do the same thing I just did for all the actors
+role = Role.new
+role["movie_id"] = batman_begins["id"]
+role["actor_id"] = christian["id"]
+role["character_name"] = "Bruce Wayne"
+role.save
+
+role = Role.new
+role["movie_id"] = batman_begins["id"]
+role["actor_id"] = michael["id"]
+role["character_name"] = "Alfred"
+role.save
+
+
+
+
 
 # Prints a header for the movies output
 puts "Movies"
